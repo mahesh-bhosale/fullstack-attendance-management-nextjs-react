@@ -1,0 +1,48 @@
+{
+  "name": "student-attendance-tracking",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "npx drizzle-kit push",
+    "db:studio": "npx drizzle-kit studio"
+  },
+  "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.3.8",
+    "@neondatabase/serverless": "^0.9.5",
+    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-popover": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "ag-grid-react": "^32.1.0",
+    "axios": "^1.7.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "drizzle-orm": "^0.33.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "lucide-react": "^0.439.0",
+    "moment": "^2.30.1",
+    "mysql2": "^3.11.2",
+    "next": "^14.2.14",
+    "next-themes": "^0.3.0",
+    "pg-core": "^0.1.15",
+    "react": "^18",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "recharts": "^2.12.7",
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.24.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}

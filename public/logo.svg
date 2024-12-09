@@ -1,0 +1,17 @@
+<svg id="attendance-logo" width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left side: Attendance icon -->
+  <g id="calendar-icon">
+    <rect x="20" y="20" width="80" height="60" rx="10" fill="#B4E1FF" stroke="#4A90E2" stroke-width="4"/>
+    <rect x="20" y="10" width="80" height="20" rx="5" fill="#FF6F61"/>
+    <!-- Rows of checkmarks and crosses -->
+    <text x="30" y="40" font-size="20" font-family="Arial" fill="#4A90E2">✔</text>
+    <text x="55" y="40" font-size="20" font-family="Arial" fill="#4A90E2">✔</text>
+    <text x="80" y="40" font-size="20" font-family="Arial" fill="#FF6F61">✘</text>
+    <text x="30" y="60" font-size="20" font-family="Arial" fill="#4A90E2">✔</text>
+    <text x="55" y="60" font-size="20" font-family="Arial" fill="#4A90E2">✔</text>
+    <text x="80" y="60" font-size="20" font-family="Arial" fill="#FF6F61">✘</text>
+  </g>
+
+  <!-- Right side: Text -->
+  <text x="120" y="60" font-family="Arial" font-size="30" fill="#0000FF" font-weight="bold">IamPresent</text>
+</svg>
