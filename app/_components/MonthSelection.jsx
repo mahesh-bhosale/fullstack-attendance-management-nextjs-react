@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import {
   Popover,
@@ -9,13 +9,10 @@ import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import moment from "moment";
-import { addMonths } from "date-fns";
 
-// Accept selectedMonth as a prop
 function MonthSelection({ selectedMonth }) {
-    const today = new Date();
-    const nextMonths = addMonths(today, 0);
-    const [month, setMonth] = useState(nextMonths);
+  const today = new Date(); // Get today's date
+  const [month, setMonth] = useState(today); // Initial state is the current month
 
   return (
     <div>
@@ -26,27 +23,36 @@ function MonthSelection({ selectedMonth }) {
             className="flex gap-2 items-center text-slate-500"
           >
             <CalendarDays className="h-5 w-5" />
-            {moment(month).format("MMM YYYY")}
+            {moment(month).format("MMM YYYY")} {/* Display selected month */}
           </Button>
         </PopoverTrigger>
         <PopoverContent>
           <Calendar
             mode="single"
             month={month}
-              onMonthChange={(value) => {
-                // Ensure selectedMonth is a function before calling it
-                if (typeof selectedMonth === 'function') {
-                  selectedMonth(value);
-                }
-                setMonth(value);
-              }}
-            className="flex flex-1 justify-center"
+            onDayClick={(value) => {
+              const selectedMonthDate = new Date(
+                value.getFullYear(),
+                value.getMonth(), // Only use the month and year
+                1
+              );
+              setMonth(selectedMonthDate);
+              if (typeof selectedMonth === "function") {
+                selectedMonth(selectedMonthDate);
+              }
+            }}
+            onMonthChange={(newMonth) => {
+              setMonth(newMonth);
+              if (typeof selectedMonth === "function") {
+                selectedMonth(newMonth);
+              }
+            }}
+            disabled={(date) => true} // Disable all specific dates
+            className="flex flex-1 justify-center "
           />
         </PopoverContent>
       </Popover>
     </div>
-
-
   );
 }
 
